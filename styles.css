@@ -1,0 +1,176 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6e6;
+    text-align: center;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    color: #d63384;
+    font-size: 24px;
+}
+
+/* Mensaje */
+.mensaje {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Carrusel de imágenes */
+.swiper {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contador de días */
+.contador {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Botón de sorpresa */
+.btn-sorpresa {
+    background-color: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-sorpresa:hover {
+    background-color: #ff1a40;
+}
+
+/* Botón de volver al inicio */
+.btn-volver {
+    background-color: #ff85a2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+    animation: latidos 1.5s infinite alternate;
+}
+
+.btn-volver:hover {
+    background-color: #ff4d6d;
+    box-shadow: 0 6px 12px rgba(255, 20, 147, 0.5);
+}
+
+/* Animación de latido */
+@keyframes latidos {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Mensaje Secreto */
+#mensaje-secreto {
+    display: none;
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: #fff3f3;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de corazones flotantes */
+.corazones {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.corazon {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background: red;
+    clip-path: polygon(50% 0%, 100% 40%, 75% 100%, 50% 75%, 25% 100%, 0% 40%);
+    animation: flotar 5s infinite;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .mensaje, .contador { font-size: 16px; }
+}
+
+.oculto {
+    display: none;
+}
+
+#enlace-secreto a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ff1493;
+    font-weight: bold;
+}
+
+#enlace-secreto a:hover {
+    text-decoration: underline;
+}
+
+/* Fondo especial para la sorpresa */
+.sorpresa {
+    background: url('fondo.jpg') no-repeat center center/cover;
+    text-align: center;
+}
+
+/* Mensaje especial */
+.mensaje-especial {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff69b4;
+    margin: 20px 0;
+    animation: latidos 1.5s infinite alternate;
+}
+
+/* Estilo del video */
+.video-sorpresa {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+}
